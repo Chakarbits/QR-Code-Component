@@ -44,9 +44,22 @@ body {
     var(--spacing-200);
   max-width: 20rem;
   text-align: center;
+  border-radius: 1.25rem;
 }
 
 .qr-card__barcode-image {
-  width: 10rem;
-  height: 10rem;
+  max-width: 18rem;
+  min-width: 10rem;
+  border-radius: 0.625rem;
+}
+
+.qr-card__heading {
+  font-size: var(--fs-700);
+  color: var(--color-slate-900);
+  font-weight: var(--fw-bold);
+  line-height: 120%;
+}
+
+.qr-card__description {
+  margin-top: var(--spacing-300);
 }
