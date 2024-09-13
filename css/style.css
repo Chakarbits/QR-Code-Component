@@ -24,7 +24,29 @@
   --spacing-500: 2.5rem;
 }
 
+/* Centers the child element vertically and horizontally */
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 body {
   font-family: "Outfit", sans-serif;
   font-size: var(--fs-400);
+  background: var(--color-slate-300);
+}
+
+.qr-card {
+  background: var(--color-white);
+  padding: var(--spacing-200) var(--spacing-200) var(--spacing-500)
+    var(--spacing-200);
+  max-width: 20rem;
+  text-align: center;
+}
+
+.qr-card__barcode-image {
+  width: 10rem;
+  height: 10rem;
 }
