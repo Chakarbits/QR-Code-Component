@@ -1,4 +1,4 @@
-/* Universal Selector Reset */
+/* Reset default browser styles for all elements, including before/after pseudo-elements */
 *,
 *::after,
 *::before {
@@ -7,59 +7,79 @@
   box-sizing: border-box;
 }
 
+/* Global color palette, font weights, font sizes, and spacing units for consistent styling */
 :root {
-  --color-slate-900: #1f314f;
-  --color-slate-500: #68778d;
-  --color-slate-300: #d5e1ef;
-  --color-white: #ffffff;
+  --color-slate-900: #1f314f; /* Dark slate color */
+  --color-slate-500: #68778d; /* Medium slate color */
+  --color-slate-300: #d5e1ef; /* Light slate color */
+  --color-white: #ffffff; /* Pure white color */
 
-  --fw-regular: 400;
-  --fw-bold: 700;
+  --fw-regular: 400; /* Normal font weight */
+  --fw-bold: 700; /* Bold font weight */
 
-  --fs-400: 0.9rem;
-  --fs-700: 1.375rem;
+  --fs-400: 0.9rem; /* Base font size for body text */
+  --fs-700: 1.375rem; /* Larger font size for headings */
 
-  --spacing-200: 1rem;
-  --spacing-300: 1.5rem;
-  --spacing-500: 2.5rem;
+  --spacing-200: 1rem; /* Small spacing unit */
+  --spacing-300: 1.5rem; /* Medium spacing unit */
+  --spacing-500: 2.5rem; /* Large spacing unit */
 }
 
-/* Centers the child element vertically and horizontally */
+/* Center the entire content of the page both vertically and horizontally */
 html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; /* Full viewport height */
 }
 
 body {
-  font-family: "Outfit", sans-serif;
-  font-size: var(--fs-400);
-  background: var(--color-slate-300);
+  font-family: "Outfit", sans-serif; /* Main font family for the body */
+  font-size: var(--fs-400); /* Base font size */
+  background: var(--color-slate-300); /* Light background color */
 }
 
+/* Styles for the QR code card container */
 .qr-card {
-  background: var(--color-white);
+  background: var(--color-white); /* White background for the card */
   padding: var(--spacing-200) var(--spacing-200) var(--spacing-500)
-    var(--spacing-200);
-  max-width: 20rem;
-  text-align: center;
-  border-radius: 1.25rem;
+    var(--spacing-200); /* Padding around the card */
+  max-width: 20rem; /* Max width for the card */
+  text-align: center; /* Center text inside the card */
+  border-radius: 1.25rem; /* Rounded corners */
 }
 
+/* Styles for the QR code image */
 .qr-card__barcode-image {
-  max-width: 18rem;
-  min-width: 10rem;
-  border-radius: 0.625rem;
+  max-width: 18rem; /* Maximum width for the image */
+  border-radius: 0.625rem; /* Slightly rounded corners for the image */
 }
 
+/* Styles for the main heading of the QR card */
 .qr-card__heading {
-  font-size: var(--fs-700);
-  color: var(--color-slate-900);
-  font-weight: var(--fw-bold);
-  line-height: 120%;
+  font-size: var(--fs-700); /* Larger font size for heading */
+  margin-top: var(--spacing-300); /* Top margin for spacing */
+  color: var(--color-slate-900); /* Dark text color */
+  font-weight: var(--fw-bold); /* Bold font weight */
+  line-height: 120%; /* Adjusted line height for better readability */
 }
 
+/* Styles for the description text below the heading */
 .qr-card__description {
-  margin-top: var(--spacing-300);
+  margin-top: var(--spacing-200); /* Top margin for spacing */
+  font-size: 1rem; /* Font size for description */
+  font-weight: var(--fw-regular); /* Normal font weight */
+  color: var(--color-slate-500); /* Medium-dark color for text */
+  line-height: 1.3125rem; /* Line height for readability */
+  letter-spacing: 0.0125rem; /* Slight letter spacing */
+}
+
+/* Attribution section styling */
+.attribution {
+  margin-top: var(--spacing-200); /* Margin for spacing */
+  font-size: 0.8rem; /* Smaller font size for attribution */
+  text-align: center; /* Center-align attribution text */
+}
+.attribution a {
+  color: hsl(228, 45%, 44%); /* Blue link color */
 }
