@@ -26,14 +26,13 @@
 }
 
 /* Center the entire content of the page both vertically and horizontally */
-html {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
-}
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   font-family: "Outfit", sans-serif; /* Main font family for the body */
   font-size: var(--fs-400); /* Base font size */
   background: var(--color-slate-300); /* Light background color */
